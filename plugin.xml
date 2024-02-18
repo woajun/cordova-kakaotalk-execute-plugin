@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cordova-plugin-kakaotalkexecuteplugin" version="0.2.3">
+    <name>KakaoTalkExecutePlugin</name>
+    <description>KakaoTalk DevicExecute Plugin</description>
+    <keywords>kakaotalk</keywords>
+
+    <js-module src="www/kakaotalkexecute.js" name="kakaotalkexecute">
+        <clobbers target="kakaotalkexecute" />
+    </js-module>
+
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="KakaoTalkExecute">
+                <param name="ios-package" value="KakaoTalkExecute"/>
+            </feature>
+        </config-file>
+        <header-file src="src/ios/KakaoTalkExecute.h" />
+        <source-file src="src/ios/KakaoTalkExecute.m" />
+    </platform>
+</plugin>
